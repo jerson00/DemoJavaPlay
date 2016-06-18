@@ -1,0 +1,39 @@
+@()
+
+@main("Soccer Matches") {
+    <script type='text/javascript' src='@routes.Assets.at("javascripts/index.js")'></script>
+<div class="container-fluid alert-info">  <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="/">Soccer Matches</a> </div>  </li> </ul> </li> </ul> </div> </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Register Match</div>
+                <div class="panel-body">
+                    <form method="POST" action="@routes.Application.addMatch()">
+                        <div>
+                            <input class="form-control" type="text" name="localTeam" placeholder="Local Team..." autofocus/>
+                            <br>
+                            <input class="form-control" type="text" name="awayTeam" placeholder="Away Team"/>
+                            <br>
+                            <input class="form-control" type="text" name="stadium" placeholder="Stadium..."/>
+                            <br>
+                            <button class="btn btn-success">Add Match</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="row">
+            <ul class="list-unstyled">
+                <li >
+                    <div class="row">
+                        <div class='col-md-8 col-md-offset-2' id="matches"></div>
+                    </div>
+                <li/>
+            </ul>
+    </div>
+
+}
